@@ -55,6 +55,19 @@
 --font-serif: var(--font-serif);
 }
 
+/* Prevent horizontal scrolling on mobile devices */
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+}
 :root {
   color-scheme: light;
   --background: #fef3c7;

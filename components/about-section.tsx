@@ -91,22 +91,76 @@ export function AboutSection() {
             </p>
 
             {/* Values Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* Values Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {values.map((value, index) => {
                 const Icon = value.icon
+
                 return (
                   <motion.div
                     key={index}
-                    className="flex gap-3 items-start p-4 rounded-xl bg-sand border-2 border-gold/20 hover:border-gold hover:bg-gold/5 transition-all duration-300"
+                    className="
+          flex
+          gap-3
+          items-start
+          p-4
+          sm:p-5
+          rounded-xl
+          bg-sand
+          border-2
+          border-gold/20
+          hover:border-gold
+          hover:bg-gold/5
+          transition-all
+          duration-300
+          min-w-0
+          overflow-hidden
+        "
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.6 }}
                   >
-                    <Icon className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-bold text-charcoal text-sm">{value.title}</p>
-                      <p className="text-xs text-stone">{value.description}</p>
+                    {/* Icon */}
+                    <Icon
+                      className="
+            w-5 h-5
+            sm:w-6 sm:h-6
+            text-gold
+            flex-shrink-0
+            mt-1
+          "
+                    />
+
+                    {/* Text */}
+                    <div className="min-w-0 flex-1">
+                      <p
+                        className="
+              font-bold
+              text-charcoal
+              text-sm
+              sm:text-base
+              leading-snug
+              break-words
+              whitespace-normal
+            "
+                      >
+                        {value.title}
+                      </p>
+
+                      <p
+                        className="
+              text-xs
+              sm:text-sm
+              text-stone
+              leading-relaxed
+              break-words
+              whitespace-normal
+              mt-1
+            "
+                      >
+                        {value.description}
+                      </p>
                     </div>
                   </motion.div>
                 )
@@ -115,23 +169,68 @@ export function AboutSection() {
 
             {/* CTA */}
             <motion.div
-              className="pt-6 border-t-2 border-gold/20"
+              className="pt-6 mt-2 border-t-2 border-gold/20"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <p className="text-sm text-stone font-semibold mb-4">Let&apos;s create something amazing together!</p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <p
+                className="
+      text-sm
+      sm:text-base
+      text-stone
+      font-semibold
+      mb-4
+      leading-relaxed
+    "
+              >
+                Let&apos;s create something amazing together!
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
                   href="#contact"
-                  className="inline-block px-6 py-3 bg-gold text-charcoal font-bold rounded-full hover:bg-stone hover:text-cream transition-all duration-300 shadow-md hover:shadow-lg text-center"
+                  className="
+        inline-block
+        w-full
+        sm:w-auto
+        px-6
+        py-3
+        bg-gold
+        text-charcoal
+        font-bold
+        rounded-full
+        hover:bg-stone
+        hover:text-cream
+        transition-all
+        duration-300
+        shadow-md
+        hover:shadow-lg
+        text-center
+      "
                 >
                   Open to Commissions
                 </a>
+
                 <a
                   href="#contact"
-                  className="inline-block px-6 py-3 border-2 border-gold text-charcoal font-bold rounded-full hover:bg-gold/10 transition-all duration-300 text-center"
+                  className="
+        inline-block
+        w-full
+        sm:w-auto
+        px-6
+        py-3
+        border-2
+        border-gold
+        text-charcoal
+        font-bold
+        rounded-full
+        hover:bg-gold/10
+        transition-all
+        duration-300
+        text-center
+      "
                 >
                   Collaborations
                 </a>
@@ -173,6 +272,7 @@ export function AboutSection() {
 
         {/* Testimonials */}
         <motion.div
+        id="contact"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

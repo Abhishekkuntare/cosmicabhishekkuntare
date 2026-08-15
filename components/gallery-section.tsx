@@ -14,14 +14,14 @@ const reels = [
     thumbnail: '/reels/reel-1.png',
     url: 'https://www.instagram.com/p/Db5ccOjv2gf/',
   },
-    {
+  {
     id: 2,
     title: 'Aura men sketch ',
     category: 'Aura Reel ',
     thumbnail: '/reels/reel-2.png',
     url: 'https://www.instagram.com/reel/Db5ZzcYvVoN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-  },  
-  
+  },
+
   {
     id: 3,
     title: '🙂❤️‍🩹',
@@ -29,7 +29,7 @@ const reels = [
     thumbnail: '/reels/reel-3.png',
     url: 'https://www.instagram.com/reel/DbuT1tlMmPn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
   },
-    
+
   {
     id: 4,
     title: 'My life',
@@ -37,8 +37,8 @@ const reels = [
     thumbnail: '/reels/reel-4.png',
     url: 'https://www.instagram.com/reel/DbvP6M4MHw6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
   },
- 
- 
+
+
 ]
 
 export function GallerySection() {
@@ -76,16 +76,41 @@ export function GallerySection() {
         {/* PORTFOLIO HEADER */}
         {/* ========================================================= */}
 
-        <div className="mb-16">
+        <div className="mb-12 sm:mb-16 w-full max-w-full overflow-hidden">
           <div className="space-y-3">
-            <h2 className="text-6xl sm:text-7xl font-black text-charcoal mb-2 tracking-tight">
+            <h2
+              className="
+        text-[2.7rem]
+        leading-[1.05]
+        font-black
+        text-charcoal
+        mb-2
+        tracking-[-0.04em]
+        sm:text-5xl
+        sm:leading-tight
+        md:text-6xl
+        lg:text-7xl
+        lg:tracking-tight
+      "
+            >
               PORTFOLIO
             </h2>
 
-            <div className="w-20 h-2 bg-gradient-to-r from-gold to-stone rounded-full" />
+            <div className="w-16 sm:w-20 h-1.5 sm:h-2 bg-gradient-to-r from-gold to-stone rounded-full" />
           </div>
 
-          <p className="text-lg text-stone font-semibold max-w-2xl mt-6">
+          <p
+            className="
+      text-base
+      sm:text-lg
+      text-stone
+      font-semibold
+      max-w-2xl
+      mt-5
+      sm:mt-6
+      leading-relaxed
+    "
+          >
             A collection of hand-drawn characters, illustrations, and artistic
             storytelling
           </p>
@@ -105,11 +130,10 @@ export function GallerySection() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 font-bold text-sm transition-all duration-300 rounded-full border-2 ${
-                activeCategory === category
+              className={`px-5 py-2 font-bold text-sm transition-all duration-300 rounded-full border-2 ${activeCategory === category
                   ? 'bg-gold text-charcoal border-gold shadow-lg'
                   : 'border-gold/30 text-charcoal hover:border-gold hover:bg-gold/10'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -330,7 +354,7 @@ export function GallerySection() {
           </motion.div>
 
           {/* View Instagram Button */}
-          <div   className="flex justify-center mt-12">
+          <div className="flex justify-center mt-12">
 
             <a
               href="https://www.instagram.com/imcosmosabhishek/"

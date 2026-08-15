@@ -51,12 +51,25 @@ export function HeroSection() {
           </motion.div>
 
           {/* Bold Headline with Multiple Lines */}
-          <div className="space-y-4">
+          {/* Bold Headline with Multiple Lines */}
+          <div className="space-y-4 w-full max-w-full overflow-hidden">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-6xl sm:text-7xl lg:text-8xl font-black leading-tight tracking-tighter text-charcoal"
+              className="
+      text-[2.7rem]
+      leading-[1.05]
+      tracking-[-0.04em]
+      font-black
+      text-charcoal
+      sm:text-5xl
+      sm:leading-[1.05]
+      md:text-6xl
+      lg:text-8xl
+      lg:leading-tight
+      lg:tracking-tighter
+    "
             >
               ART THAT{' '}
               <span className="relative inline-block">
@@ -72,9 +85,18 @@ export function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-lg sm:text-xl text-stone font-semibold max-w-2xl leading-relaxed"
+              className="
+      text-base
+      sm:text-lg
+      md:text-xl
+      text-stone
+      font-semibold
+      max-w-2xl
+      leading-relaxed
+    "
             >
-              Hand-drawn illustrations, character design, and artistic storytelling that captures imagination
+              Hand-drawn illustrations, character design, and artistic storytelling
+              that captures imagination
             </motion.p>
           </div>
 
